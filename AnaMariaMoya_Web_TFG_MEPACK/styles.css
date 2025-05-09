@@ -1,0 +1,368 @@
+body {
+  margin: 0;
+  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  background-color: #a135a5;
+  color: white;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.logo {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Tamaño por defecto para móvil */
+.logo-img {
+  width: 60%;
+}
+
+
+
+.tarjetas {
+  padding: 0px 0px;
+  position:relative;
+ text-align:center;
+	bottom:40px;
+	margin: 0px 10%;
+}
+
+#tarjetaque{
+  position:relative;
+  top: 40px;
+  left: 0px;
+  width:22vw; z-index:1;
+  margin-right: 5vw;
+}
+
+#tarjetadonde {
+  position:relative;
+  width:22vw; z-index:1;
+  top: 20px;
+  left: 2%;
+  margin-right: 5vw;
+}
+
+#tarjetaquien{
+  position:relative;
+  width:22vw; z-index:1;
+  top: 90px;
+}
+
+#pincel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  max-width: 300px;
+	  cursor: grab;
+	z-index: 2;
+}
+	
+#scrollfor {
+		width:40%;
+		position: relative;
+		left:0px;
+		top:40px;
+	}
+#pieza {
+    position:absolute; 
+	left:-100px;
+	z-index: -1;
+}
+
+#imagen_pieza {
+	width:300px;
+}
+
+#lapiznino {
+    position:relative; 
+	display: inline-block;
+	top:60px;
+ }
+
+#caja_descubrete {
+	text-align:center;
+	position:relative;
+	top:80px;
+}
+#descubrete {
+	 width:90%;
+}
+
+
+#unnino {
+	position:absolute;
+	top:100px;
+	left: 5%;
+	z-index:1;
+}
+
+#imagen_unnino {
+	width: 50%
+}
+
+#imagen_mundo {
+	width: 60%
+}
+
+
+#mundo {
+	position:absolute;
+	top:120px;
+	width:100%;
+	margin-left: 80%;
+	z-index:-1;
+}
+
+#caja_papel {
+	text-align: right;
+	position:relative;
+	top:250px;
+	right:-80px;
+	z-index:-2;
+}
+
+#seccion_testeo {
+	position:relative;
+	top:220px;
+	height: 600px;
+	
+}
+
+#testeo {
+	position:absolute;
+	height: auto;
+	max-width: 100%;
+	height: auto;
+	left: 0;
+	z-index: 1;
+}
+
+#imagen_testeo {
+	height: 400px;
+	
+}
+
+#caja_sacapuntas {
+	position:absolute;
+	right: 2%;
+	top:-50px;
+}
+
+#imagen_sacapuntas {
+	height: 200px;
+}
+
+#caja_manos {
+	position:absolute;
+	right: 2%;
+	top:200px;
+}
+
+#imagen_manos {
+	position:absolute;
+	height: 200px;
+	right: 2%;
+}
+
+
+
+
+.flota {
+  animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.agrandable {
+  transition: transform 0.3s ease;
+}
+.agrandable:hover {
+  transform: scale(1.2); /* se agranda al 120% */
+}
+
+.brillante {
+  position: relative;
+  overflow: hidden;
+}
+.brillante::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+}
+.brillante:hover::before {
+  animation: brillo 1s linear;
+}
+@keyframes brillo {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.draggable {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.draggable:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.img-gira {
+  display: block;
+  transition: transform 0.1s linear;
+}
+
+@media only screen and (min-width: 700px) {
+  .logo-img {
+    width: 25%; /* o el valor más pequeño que prefieras */
+  }
+	
+   .tarjetas {
+  margin:0px 20%;
+  position:relative;
+ text-align: center;
+}
+
+#tarjetaque{
+  position:relative;
+  top: 40px;
+  right: 0px;
+  width:12vw; z-index:1;
+  margin-right: 3vw;
+}
+
+#tarjetadonde {
+  position:relative;
+  width:12vw; z-index:1;
+  bottom: 0px;
+  left: 0px;
+  margin-right: 2vw;
+}
+
+#tarjetaquien{
+  position:relative;
+  width:12vw; z-index:1;
+}
+	#linea {
+  width:105%;
+top: 38vh;
+	}
+	
+	
+	#pincel {
+		width: 20%;
+		left: calc(30% - 50px);
+	}
+
+	#scrollfor {
+		width:20%;
+	}
+	
+	#pieza {
+    position:absolute; 
+	left:calc(30% - 50px);
+}
+
+	#lapiznino {
+    position:absolute; 
+	top:60px;
+	left: 42%
+	}
+	
+	
+#caja_descubrete {
+	top:320px;
+	}
+	
+	#descubrete {
+	 width:60%;	
+	top:300px;
+	}
+	
+	#unnino {
+	top:340px;
+	width:80%;
+	position:absolute;
+	left: 20%;
+	}
+		
+	#imagen_unnino{
+	width: 40%
+	}
+
+
+	#mundo {
+	top:340px;
+	right: auto;
+}
+
+	#imagen_mundo {
+	width: 50%
+}
+
+
+	#caja_papel {
+	top:530px;
+	}
+
+	#seccion_testeo {
+		top: 450px;
+		margin: 0px 15%;
+	} 
+
+	#testeo {
+}
+	
+	#imagen_testeo {
+		height: 600px;
+	}
+
+	#caja_sacapuntas {
+		top:-100px;
+		
+	}
+	
+	#imagen_sacapuntas {
+		height: 400px;
+	}
+
+
+	#caja_manos {
+		top:270px;
+		
+	}
+	
+	#imagen_manos {
+		height: 400px;
+	}
+
+}
