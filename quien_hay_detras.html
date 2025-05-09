@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página en Obras - Quién hay detráss</title>
+	<link rel="stylesheet" href="styles_2.css"/>
+  <style>
+    .obras {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+		margin-top:-90px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: flotar 3s ease-in-out infinite;
+	color: white;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+	  
+	  @media only screen and (min-width: 700px) {
+		  
+		  .obras {
+			  margin-top:auto;
+		  }
+	  }
+  </style>
+</head>
+<body>
+	<div class="logo agrandable">
+		<a href="index.html"><img class="logo-img" src="00_Recursosfinales/ME-PACK.png" alt="ME-PACK LOGO"></a>
+	</div>
+	
+	<div>
+	<div class="tarjetas">
+		<a href="que_es.html"><img id="tarjetaque" class="agrandable" src="00_Recursosfinales/quees.png" alt="Pieza ¿Qué es?"></a>
+		<a href="de_donde_viene.html"><img id="tarjetadonde" class="agrandable" src="00_Recursosfinales/dedonde.png" alt="Pieza ¿De dónde viene?"></a>
+		<a href="quien_hay_detras.html"><img id="tarjetaquien" class="agrandable" src="00_Recursosfinales/quienhaydetras.png" alt="Pieza ¿Quién hay detrás?"></a>
+		</div>
+	</div>
+		
+	<div class="obras">
+  <h1>🚧 ¡Estamos en obras!</h1>
+  <div class="loader"></div>
+  <p>Volvemos pronto con algo bonito. Gracias por tu paciencia.</p>
+		</div>
+</body>
+</html>

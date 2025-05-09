@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+  background-color: #a135a5;
+  color: white;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.logo {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Tamaño por defecto para móvil */
+.logo-img {
+  width: 60%;
+}
+
+.tarjetas {
+  padding: 0px 0px;
+  position:relative;
+ text-align:center;
+	bottom:40px;
+	margin: 0px 10%;
+	height:240px;
+}
+
+#tarjetaque{
+  position:relative;
+  top: 40px;
+  left: 0px;
+  width:22vw; z-index:1;
+  margin-right: 5vw;
+}
+
+#tarjetadonde {
+  position:relative;
+  width:22vw; z-index:1;
+  top: 20px;
+  left: 2%;
+  margin-right: 5vw;
+}
+
+#tarjetaquien{
+  position:relative;
+  width:22vw; z-index:1;
+  top: 90px;
+}
+
+.titular {
+	position:relative;
+	margin:0px 15%;
+	margin-bottom: 20px;
+	border:inset;
+	border-radius: 80px;
+	text-align: center;
+	top:-80px;
+	background-color: azure;
+  	justify-content: center; 
+  	align-items: center;     
+ 	height: 200px;           
+  	text-align: center; 
+	display:flex;
+	background-image: url("00_Recursosfinales/papel_arrugado.png")
+}
+
+h1, h2 {
+	color:#a135a5;
+	display:flex;
+	justify-content: center; 
+  	align-items: center;   
+}
+
+.seccion {
+	position:relative;
+	margin:0px 20%;
+	overflow: auto;
+	height: auto;
+}
+
+#seccion1 {
+	height: auto;	
+	top:-80px;
+}
+
+.caja_imagenes {
+	width:100%;
+	position:relative;
+	text-align: center
+}
+
+.caja_texto {
+	width:100%;
+	position:relative;
+	text-align:left; 
+}
+
+.titular2 {
+	position:relative;
+	margin-bottom: 20px;
+	border:inset;
+	border-radius: 80px;
+	text-align: center;
+	background-image: url("00_Recursosfinales/papel_arrugado.png")
+	
+}
+
+
+#video {
+	width:100%;
+}
+
+#imagen_prototipo {
+	width:100%;
+}
+
+#grafico1 {
+	padding:20px;
+	margin: 20px -20px;
+}
+
+#grafico2 {
+	margin: 20px 0px;
+}
+
+/*Animaciones*/
+
+.flota {
+  animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.agrandable {
+  transition: transform 0.3s ease;
+}
+.agrandable:hover {
+  transform: scale(1.2); /* se agranda al 120% */
+}
+
+.brillante {
+  position: relative;
+  overflow: hidden;
+}
+.brillante::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+}
+.brillante:hover::before {
+  animation: brillo 1s linear;
+}
+@keyframes brillo {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.draggable {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.draggable:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.img-gira {
+  display: block;
+  transition: transform 0.1s linear;
+}
+
+@media only screen and (min-width: 700px) {
+  .logo-img {
+    width: 25%; /* o el valor más pequeño que prefieras */
+  }
+	
+   .tarjetas {
+  margin:0px 20%;
+  position:relative;
+ text-align: center;
+}
+
+#tarjetaque{
+  position:relative;
+  top: 40px;
+  right: 0px;
+  width:12vw; z-index:1;
+  margin-right: 3vw;
+}
+
+#tarjetadonde {
+  position:relative;
+  width:12vw; z-index:1;
+  bottom: 0px;
+  left: 0px;
+  margin-right: 2vw;
+}
+
+#tarjetaquien{
+  position:relative;
+  width:12vw; z-index:1;
+}
+
+.titular {
+	top:auto;
+	height:100px;
+	margin: 0px 20%;
+	}
+	
+	.seccion {
+	}
+	
+	#seccion1 {
+		top:auto;
+		height: auto;
+		margin-bottom:50px;
+	}
+	
+.caja_imagenes {
+	width:50%;
+	text-align: center;
+	float:left;
+	
+}
+
+.caja_texto {
+	width:50%;
+	float:left;
+
+	}
+.titular2 {
+	width:50%;
+	}
+	
+	#video {
+	width:60%;
+}
+	
+	#imagen_prototipo {
+		height:400px;
+	}
+}
