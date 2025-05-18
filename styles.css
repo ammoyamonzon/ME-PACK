@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  background-color: #a135a5;
+  font-family:"Magallanes", "sans-serif";
+  background-color: #953CB7;
   color: white;
 }
 
@@ -21,7 +21,7 @@ section {
 
 /* Tamaño por defecto para móvil */
 .logo-img {
-  width: 60%;
+  width: 90%;
 }
 
 

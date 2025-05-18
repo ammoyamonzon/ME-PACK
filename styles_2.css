@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
-  background-color: #a135a5;
+  font-family: 'Magallanes', 'sans-serif';
+  background-color: #953CB7;
   color: white;
 }
 
@@ -21,7 +21,7 @@ section {
 
 /* Tamaño por defecto para móvil */
 .logo-img {
-  width: 60%;
+  width: 90%;
 }
 
 .tarjetas {
@@ -57,10 +57,10 @@ section {
 
 .titular {
 	position:relative;
-	margin:0px 15%;
+	margin:10% 15%;
 	margin-bottom: 20px;
 	border:inset;
-	border-radius: 80px;
+	border-radius: 70px;
 	text-align: center;
 	top:-80px;
 	background-color: azure;
@@ -73,7 +73,8 @@ section {
 }
 
 h1, h2 {
-	color:#a135a5;
+	font-size: 18pt;
+	color:#953CB7;
 	display:flex;
 	justify-content: center; 
   	align-items: center;   
@@ -123,12 +124,17 @@ h1, h2 {
 }
 
 #grafico1 {
+	align-items: center;
 	padding:20px;
 	margin: 20px -20px;
 }
 
 #grafico2 {
 	margin: 20px 0px;
+}
+
+#tarjeta_imagen {
+	height: 400px;
 }
 
 /*Animaciones*/
@@ -216,6 +222,9 @@ h1, h2 {
   width:12vw; z-index:1;
   margin-right: 3vw;
 }
+	h1, h2 {
+	font-size:auto;  
+}
 
 #tarjetadonde {
   position:relative;
@@ -266,6 +275,10 @@ h1, h2 {
 }
 	
 	#imagen_prototipo {
-		height:400px;
+		height:auto;
 	}
+	
+	#grafico1 {
+	height: 450px;
+}
 }
